@@ -15,8 +15,6 @@
         <h1>Startseite</h1>
         <p>Auf diese Seite kann jeder kommen!</p>
         
-        
-
        
     </body>
 </html>

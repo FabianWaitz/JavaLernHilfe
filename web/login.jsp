@@ -19,7 +19,7 @@
                 <legend>Login</legend>
                 <ol>
                     <li>
-                        <label for="j_username">Benutzername</label>
+                        <label for="j_nutzername">Benutzername</label>
                         <input type="text" name="j_username" autofocus>
                     </li>
                     <li>

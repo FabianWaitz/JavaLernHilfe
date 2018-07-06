@@ -12,6 +12,6 @@
         <h1 class="error">Fehler 403</h1>
         <p>Der Zugriff auf die gewünschte Seite ist nicht erlaubt.</p> 
         
-        <%@ include file="/WEB-INF/jspf/sessioninfo.jspf"%> 
+       
     </body>
 </html>
