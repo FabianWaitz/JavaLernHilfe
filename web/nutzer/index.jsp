@@ -42,9 +42,14 @@
                     <tr>
                         <td>${aktuellerBegriff.Java_Begriffe}</td>
                         <td>${aktuellerBegriff.Erklärung}</td>
-                        <td>${aktuellerBegriff.Prüfungsrelevant}</td>
+                        <td> <c:if test="${aktuellerBegriff.Prüfungsrelevant}">Ja</c:if>
+                             <c:if test="${!aktuellerBegriff.Prüfungsrelevant}">Nein</c:if> </td>
                     </tr>
                 </c:forEach>
+
+
+
+
             </tbody>
         </table>
 

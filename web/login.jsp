@@ -33,6 +33,8 @@
                 </ol>
             </fieldset>
         </form>
+        
+           <%@ include file="/WEB-INF/jspf/sessioninfo.jspf"%> 
 
       
 

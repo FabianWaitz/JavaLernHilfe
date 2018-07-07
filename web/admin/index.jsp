@@ -12,7 +12,7 @@
         
         <h1 class="okay">Du bist jetzt Admin!</h1>
         <p>Diese ganz spezielle Seite ist nur für Admins zugänglich!</p>
-
+     
         
     </body>
 </html>
