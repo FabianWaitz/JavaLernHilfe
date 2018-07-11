@@ -15,7 +15,7 @@
     CREATE TABLE BENUTZER
     (BENUTZERNAME VARCHAR(255) NOT NULL,
      PASSWORT VARCHAR (255) 
-     PRIMARY KEY (BENUTZERNAME))
+     PRIMARY KEY BENUTZERNAME)
 </sql:update>
 
 <sql:update dataSource="jdbc/nutzer">
