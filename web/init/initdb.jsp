@@ -4,7 +4,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 
-<sql:update dataSource="jdbc/java">
+<sql:update dataSource="jdbc/javabegriffe">
     CREATE TABLE JAVA_BEGRIFFE
     (JAVA_BEGRIFFE VARCHAR(255) NOT NULL,
     ERKLÄRUNG VARCHAR(255),
