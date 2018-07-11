@@ -7,8 +7,8 @@
 <sql:update dataSource="jdbc/nutzer">
     CREATE TABLE JAVA_BEGRIFFE
     (JAVA_BEGRIFFE VARCHAR(255) NOT NULL,
-    ERKLÄRUNG VARCHAR(255) NULLS ALLOWED,
-    PRÜFUNGSRELEVANT BOOLEAN NULLS ALLOWED)
+    ERKLÄRUNG VARCHAR(255),
+    PRÜFUNGSRELEVANT BOOLEAN)
 </sql:update>
 
 <sql:update dataSource="jdbc/javabegriffe">
