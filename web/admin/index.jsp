@@ -12,6 +12,11 @@
         
         <h1 class="okay">Du bist jetzt Admin!</h1>
         <p>Diese ganz spezielle Seite ist nur für Admins zugänglich!</p>
+        
+        <a class="btn btn-primary" href="status.jsp">Status</a>
+         
+        <a class="btn btn-primary" href="admin.jsp">Neuen Admin anlegen</a>
+
      
         
     </body>

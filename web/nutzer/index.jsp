@@ -1,6 +1,8 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%> 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 
 
 
@@ -15,7 +17,23 @@
         <title>Datenbankseite</title>
     </head>
     <body>
+        <c:if test="${not empty param.begriff or not empty param.erklaerung or not empty param.pruefungsrelevant}">
 
+
+            <sql:update var="result" dataSource="jdbc/javabegriffe">
+                INSERT INTO JADMIN.JAVA_BEGRIFFE (JAVA_BEGRIFFE, ERKLÄRUNG, PRÜFUNGSRELEVANT)
+                VALUES ('${param.begriff}', '${param.erklaerung}', ${param.pruefungsrelevant} <c:if test="${!param.pruefungsrelevant}">false</c:if>)
+            </sql:update>
+
+        </c:if>
+        <c:if test="${not empty param.delete}">
+              
+        <sql:update var="result" dataSource="jdbc/javabegriffe">
+            DELETE FROM JADMIN.JAVA_BEGRIFFE
+            WHERE JAVA_BEGRIFFE = '${param.delete}' 
+        </sql:update> 
+            
+        </c:if> 
         <sql:query var="result" dataSource="jdbc/javabegriffe">
             SELECT Java_Begriffe, Erklärung, Prüfungsrelevant from JADMIN.JAVA_BEGRIFFE FETCH FIRST 100 ROWS ONLY
         </sql:query>
@@ -43,15 +61,37 @@
                         <td>${aktuellerBegriff.Java_Begriffe}</td>
                         <td>${aktuellerBegriff.Erklärung}</td>
                         <td> <c:if test="${aktuellerBegriff.Prüfungsrelevant}">Ja</c:if>
-                             <c:if test="${!aktuellerBegriff.Prüfungsrelevant}">Nein</c:if> </td>
+                            <c:if test="${!aktuellerBegriff.Prüfungsrelevant}">Nein</c:if> </td>
+                        <td><a href="index.jsp?delete=${aktuellerBegriff.Java_Begriffe}">X</a> </td>
+
                     </tr>
+
                 </c:forEach>
-
-
-
 
             </tbody>
         </table>
+
+        <br>
+        <h1>Neue Begriffe hinzufügen:</h1>
+        <form method="post" id="hinzufügen" name="Begriffe hinzufügen" action="">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Java Begriff</th>
+                        <th>Erklärung</th>
+                        <th>Prüfungsrelevant</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" name="begriff" value="" placeholder="Ein Java Begriff"/></td>
+                        <td><input type="text" name="erklaerung" value="" placeholder="Eine Beschreibung"/></td>
+                        <td><input type="checkbox" name="pruefungsrelevant" value="true" /></td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="submit" value="Hinzufügen" name="hinzufügen" />
+        </form>
 
 
     </body>
