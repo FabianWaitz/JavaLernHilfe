@@ -20,22 +20,22 @@
         <c:if test="${not empty param.begriff or not empty param.erklaerung or not empty param.pruefungsrelevant}">
 
 
-            <sql:update var="result" dataSource="jdbc/javabegriffe">
-                INSERT INTO JADMIN.JAVA_BEGRIFFE (JAVA_BEGRIFFE, ERKLÄRUNG, PRÜFUNGSRELEVANT)
+            <sql:update var="result" dataSource="jdbc/nutzer">
+                INSERT INTO DBADMIN.JAVA_BEGRIFFE (JAVA_BEGRIFFE, ERKLÄRUNG, PRÜFUNGSRELEVANT)
                 VALUES ('${param.begriff}', '${param.erklaerung}', ${param.pruefungsrelevant} <c:if test="${!param.pruefungsrelevant}">false</c:if>)
             </sql:update>
 
         </c:if>
         <c:if test="${not empty param.delete}">
               
-        <sql:update var="result" dataSource="jdbc/javabegriffe">
-            DELETE FROM JADMIN.JAVA_BEGRIFFE
+        <sql:update var="result" dataSource="jdbc/nutzer">
+            DELETE FROM DBADMIN.JAVA_BEGRIFFE
             WHERE JAVA_BEGRIFFE = '${param.delete}' 
         </sql:update> 
             
         </c:if> 
-        <sql:query var="result" dataSource="jdbc/javabegriffe">
-            SELECT Java_Begriffe, Erklärung, Prüfungsrelevant from JADMIN.JAVA_BEGRIFFE FETCH FIRST 100 ROWS ONLY
+        <sql:query var="result" dataSource="jdbc/nutzer">
+            SELECT Java_Begriffe, Erklärung, Prüfungsrelevant from DBADMIN.JAVA_BEGRIFFE FETCH FIRST 100 ROWS ONLY
         </sql:query>
 
         <%@ include file="/WEB-INF/jspf/navi.jspf"%> 

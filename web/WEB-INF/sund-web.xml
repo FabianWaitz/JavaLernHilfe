@@ -13,10 +13,6 @@
     <res-ref-name>jdbc/nutzer</res-ref-name>
     <jndi-name>jdbc/nutzer</jndi-name>
   </resource-ref>
-  <resource-ref>
-    <res-ref-name>jdbc/javabegriffe</res-ref-name>
-    <jndi-name>jdbc/javabegriffe</jndi-name>
-  </resource-ref>
   <class-loader delegate="true"/>
   <jsp-config>
     <property name="keepgenerated" value="true">
