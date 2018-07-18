@@ -33,3 +33,10 @@
     ('admin', 'a_nutzer')
 </sql:update>
 
+<sql:update dataSource="jdbc/nutzer">
+    INSERT INTO JAVA_BEGRIFFE (JAVA_BEGRIFFE, ERKLÄRUNG, PRÜFUNGSRELEVANT) VALUES
+    ('Beispiel1', 'Beispiel Erklaerung', 'false'),
+    ('Beispiel2', 'Eerklaerung 2', 'true')
+    
+</sql:update>
+

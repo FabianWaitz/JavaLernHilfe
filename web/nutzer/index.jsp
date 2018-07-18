@@ -8,7 +8,7 @@
 
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" >
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/html" charset=UTF-8">
         <link href="<%= request.getContextPath()%>/styles.css" rel="stylesheet" type="text/css"/>
 
         <title>Datenbankseite</title>
