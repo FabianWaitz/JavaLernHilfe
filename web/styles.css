@@ -44,7 +44,7 @@ div#include{
     padding: 15px;
     text-align: center;
     margin-top: 0px;
-    font-size: 2rem;
+    font-size: 2rem;    
 }
 
 .blog-nav-item {
@@ -61,15 +61,14 @@ div#include{
     text-decoration: none;
 }
 
-.a, .btn-link {
-    text-decoration: none;
-    color: #222222;
-}
-
+.btn-link:focus,
+.btn-link:active:focus,
 .btn-link:hover {
     text-decoration: none;
-    color: red;
+    color: #e83748;
 }
+
+
 
 
 
@@ -124,5 +123,9 @@ div#sessioninfo {
 
 .register {
     margin-top: 30px;
+}
+
+.logininfo p{
+    font-size: 15px;
 }
 

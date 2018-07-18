@@ -30,6 +30,9 @@
 
     </form>
 </div>
+        <footer>
+            <%@ include file="/WEB-INF/jspf/sessioninfo.jspf"%> 
+        </footer>
         </div>     
     </body>
 </html>

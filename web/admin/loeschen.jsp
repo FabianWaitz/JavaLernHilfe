@@ -38,8 +38,8 @@
 
             <h2 class="okay">Sie können nun alle Benutzer verwalten!</h2>
             <h3><b>Wichtig:</b></h3><p>Lösche unter keinen Umständen den Nutzer "admin", da 
-            es ansonsten keine Möglichkeiten mehr gibt, den Adminbereich zu verwalten. Das Löschen der Nutzer
-            entfernt ihre Daten endgültig!</p>
+                es ansonsten keine Möglichkeiten mehr gibt, den Adminbereich zu verwalten. Das Löschen der Nutzer
+                entfernt ihre Daten endgültig!</p>
 
             <table class="table table-hover table-dark datenbank">
                 <thead>
@@ -67,6 +67,9 @@
                 </tbody>
             </table>
             <a class="btn btn-danger" href="index.jsp">Zurück</a>
+            <footer>
+                <%@ include file="/WEB-INF/jspf/sessioninfo.jspf"%> 
+            </footer>
         </div>
     </body>
 </html>

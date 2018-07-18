@@ -21,7 +21,7 @@
                 Alle neuen Nutzer müssen sich bitte erst noch registrieren.</b><br>
         </p>
 
-        <h2 class="register"><b>Bitte registrieren Sie sich</b></h2>
+        <h2 style="color:#dc3545;" class="register">Bitte registrieren Sie sich</h2>
 
 
         <div class="formular">
@@ -39,7 +39,12 @@
             </form>
         </div>
 
-        <%@ include file="/WEB-INF/jspf/sessioninfo.jspf"%> 
-        </div>
+      
+       
+        <footer>
+            <%@ include file="/WEB-INF/jspf/sessioninfo.jspf"%> 
+        </footer>
+         </div>
     </body>
+    
 </html>

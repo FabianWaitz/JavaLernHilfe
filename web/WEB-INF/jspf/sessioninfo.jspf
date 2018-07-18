@@ -1,11 +1,6 @@
 
 <!-- Gemeinsam verwendete Session-Information -->
 <div class="logininfo">
-    <strong>Sessioninformationen</strong>
-    <table>      
-        <tr>
-            <td>Eingeloggt als</td>
-            <td><%=  request.getRemoteUser()%></td>
-        </tr>
-    </table>
-</div>
+   
+    <p><b>Sessioninformation:</b> Eingeloggt als <%=  request.getRemoteUser()%></p>     
+      

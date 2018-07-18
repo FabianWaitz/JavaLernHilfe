@@ -1,4 +1,4 @@
-
+    
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.TimeZone"%>
 <%@page import="java.util.Enumeration"%>
@@ -13,9 +13,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-         <%@ include file="/WEB-INF/jspf/navi.jspf"%> 
+        <%@ include file="/WEB-INF/jspf/navi.jspf"%> 
         <div class="container">
-            
+
 
             <div id="sessioninfo">
                 <strong>Sessioninformationen</strong>
@@ -36,7 +36,7 @@
                         <td>Session erzeugt am</td>
                         <td>
                             <%  SimpleDateFormat df = new SimpleDateFormat("dd.MM.yy HH:mm:ss");
-                    out.println(df.format(new Date(session.getCreationTime())));%>
+                                out.println(df.format(new Date(session.getCreationTime())));%>
                         </td>
                     </tr>
                     <tr>
@@ -59,6 +59,9 @@
             </div>
 
             <a class="btn btn-danger" href="index.jsp">Zurück</a>
+            <footer>
+                <%@ include file="/WEB-INF/jspf/sessioninfo.jspf"%> 
+            </footer>
         </div>
     </body>
 </html>

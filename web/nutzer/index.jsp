@@ -45,7 +45,7 @@
         
 
         
-        <h2>Neue Begriffe hinzufügen:</h2>
+        <h2 style="color:#dc3545;">Neue Begriffe hinzufügen:</h2>
         <form method="post" id="hinzufügen" name="Begriffe hinzufügen" action="">
             <table class="table add" border="1">
                 <thead class="thead-dark">
@@ -93,7 +93,9 @@
         </table>
 
         <br>
-        
+        <footer>
+            <%@ include file="/WEB-INF/jspf/sessioninfo.jspf"%> 
+        </footer>
         </div>
     </body>
 </html>
