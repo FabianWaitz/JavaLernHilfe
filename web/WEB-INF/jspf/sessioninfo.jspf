@@ -1,6 +1,6 @@
 
 <!-- Gemeinsam verwendete Session-Information -->
-<div id="sessioninfo">
+<div class="logininfo">
     <strong>Sessioninformationen</strong>
     <table>      
         <tr>

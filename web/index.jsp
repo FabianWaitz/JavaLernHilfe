@@ -11,36 +11,35 @@
         <title>Startseite</title>
     </head>
     <body>
+        <div class="container">
         <%@ include file="/WEB-INF/jspf/navi.jspf"%>  
+        
+        <h2>Herzlich Willkommen!</h2>
+        <p>
+            <b>Wir hoffen, dass Ihr viel Spaß mit unserem Programm haben werdet.
+                <br>Solltet ihr bereits registriert sein, könnt ihr euch einfach im Benutzerbereich anmelden.<br>
+                Alle neuen Nutzer müssen sich bitte erst noch registrieren.</b><br>
+        </p>
 
-        <h1>Startseite</h1>
-        <p>Auf diese Seite kann jeder kommen!</p>
+        <h2 class="register"><b>Bitte registrieren Sie sich</b></h2>
 
-        <h1>Bitte registrieren Sie sich</h1>
-        <form action="registrierung.jsp" method="post">
-            <fieldset>
-                <legend>Registrierung</legend>  
-                <ol>
-                    <li>
-                        <label for="benutzername">Benutzername</label>
-                        <input type="text" name="benutzername" autofocus>
-                    </li>
-                    <li>
-                        <label for="passwort">Passwort</label>
-                        <input type="password" name="passwort">
-                    </li>
 
-                    <li>
-                        <input type="submit" value="Registrieren" />
-                        <input type="reset" value="Zurücksetzen">
-                    </li>
-                </ol>
-            </fieldset>
-        </form>
+        <div class="formular">
+            <form action="registrierung.jsp" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="benutzername" aria-describedby="emailHelp" placeholder="Benutzername">
+                    <small id="emailHelp" class="form-text text-muted">Bitte keine Umlaute verwenden</small>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="passwort" placeholder="Passwort">
+                </div>
+                <input type="submit" class ="btn btn-danger" value="Registrieren" />
+                <input type="reset" class="btn btn-danger" value="Zurücksetzen">
 
+            </form>
+        </div>
 
         <%@ include file="/WEB-INF/jspf/sessioninfo.jspf"%> 
-
-
+        </div>
     </body>
 </html>

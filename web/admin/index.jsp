@@ -8,16 +8,18 @@
         <title>Adminseite</title>
     </head>
     <body>
+        <div class="container">
         <%@ include file="/WEB-INF/jspf/navi.jspf"%>  
         
-        <h1 class="okay">Du bist jetzt Admin!</h1>
-        <p>Diese ganz spezielle Seite ist nur für Admins zugänglich!</p>
+        <h2 class="okay">Du bist Admin!</h2>
+        <p>Diese ganz spezielle Seite ist nur für Admins zugänglich! Du hast alle Funktionen eines normalen
+        Benutzers und kannst außerdem weitere Admins anlegen.</p>
         
-        <a class="btn btn-primary" href="status.jsp">Status</a>
+        <a class="btn btn-danger" href="status.jsp">Status</a>
          
-        <a class="btn btn-primary" href="admin.jsp">Neuen Admin anlegen</a>
-
-     
+        <a class="btn btn-danger" href="admin.jsp">Neuen Admin anlegen</a>
         
+        <a class="btn btn-danger" href="loeschen.jsp">Benutzer verwalten</a>
+        </div>
     </body>
 </html>

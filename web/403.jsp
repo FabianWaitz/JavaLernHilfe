@@ -7,11 +7,14 @@
         <title>Fehler 403</title>
     </head>
     <body>
+        <div class="container">
         <%@ include file="/WEB-INF/jspf/navi.jspf"%> 
         
-        <h1 class="error">Fehler 403</h1>
-        <p>Der Zugriff auf die gewünschte Seite ist nicht erlaubt.</p> 
-        
-       
+        <div class="errormeldung">
+        <h2 class="error">Fehler 403</h2>
+        <p>Der Zugriff auf die gewünschte Seite ist Ihnen nicht gestattet.<br>
+            Sie haben <b>keine</b> Adminrechte.</p> 
+        </div>
+        </div>
     </body>
 </html>

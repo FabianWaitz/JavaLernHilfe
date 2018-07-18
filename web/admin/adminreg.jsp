@@ -4,16 +4,16 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
 
 
-<jsp:useBean id="userData" scope="page" class="benutzerdatenpackage.BenutzerdatenBean" />
+<jsp:useBean id="userData" scope="page" class="benutzerdatenpackage.AdmindatenBean" />
 <jsp:setProperty name="userData" property="*" />
 
 <sql:update var="result" dataSource="jdbc/nutzer">
     INSERT INTO DBADMIN.BENUTZER (BENUTZERNAME, PASSWORT) 
-    VALUES ('${userData.benutzername}', '${userData.getPasswortHash()}')
+VALUES ('${userData.admin}', '${userData.getPasswortHash()}')
 </sql:update>
 <sql:update var="result" dataSource="jdbc/nutzer">
     INSERT INTO DBADMIN.BENUTZERGRUPPE (BENUTZERNAME, GRUPPENNAME) 
-    VALUES ('${userData.benutzername}', 'b_nutzer')
+    VALUES ('${userData.admin}', 'a_nutzer')
 </sql:update>
 
 
@@ -29,8 +29,7 @@
         <div class="container">
         <%@ include file="/WEB-INF/jspf/navi.jspf"%>  
 
-        <h2>Herzlich willkommen!</h2>
-        <p><b>Sie wurden erfolgreich unter dem Namen <span style="color:red;"> <c:out value="${userData.benutzername}" /></span> registriert</b></p>         
+        <p><b>Sie haben den Admin unter dem Nutzernamen:<span style="color:red;"> <c:out value="${userData.admin}" /></span> angelegt </b></p>         
 
         </div>
     </body>

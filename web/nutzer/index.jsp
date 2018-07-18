@@ -14,6 +14,7 @@
         <title>Datenbankseite</title>
     </head>
     <body>
+        <div class="container">
         <c:if test="${not empty param.begriff or not empty param.erklaerung or not empty param.pruefungsrelevant}">
 
 
@@ -24,12 +25,12 @@
 
         </c:if>
         <c:if test="${not empty param.delete}">
-              
-        <sql:update var="result" dataSource="jdbc/nutzer">
-            DELETE FROM DBADMIN.JAVA_BEGRIFFE
-            WHERE JAVA_BEGRIFFE = '${param.delete}' 
-        </sql:update> 
-            
+
+            <sql:update var="result" dataSource="jdbc/nutzer">
+                DELETE FROM DBADMIN.JAVA_BEGRIFFE
+                WHERE JAVA_BEGRIFFE = '${param.delete}' 
+            </sql:update> 
+
         </c:if> 
         <sql:query var="result" dataSource="jdbc/nutzer">
             SELECT Java_Begriffe, Erklärung, Prüfungsrelevant from DBADMIN.JAVA_BEGRIFFE FETCH FIRST 100 ROWS ONLY
@@ -38,16 +39,40 @@
         <%@ include file="/WEB-INF/jspf/navi.jspf"%> 
 
 
-        <h1 class="okay">Willkommen!</h1>
-        <p>Um diese Seite zu erreichen, muss man als Benutzer eingeloggt sein.</p>
+        <h2>Willkommen im Java-Lernbereich.</h2>
+        <p><b>Sollte dieser Bereich für dich neu sein, kannst du dir gerne weitere Informationen zur Erklärung des Java-Lernbereich unter weitere Informationen einholen.</b><br>
+        </p><br>
+        
+
+        
+        <h2>Neue Begriffe hinzufügen:</h2>
+        <form method="post" id="hinzufügen" name="Begriffe hinzufügen" action="">
+            <table class="table add" border="1">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Java Begriff</th>
+                        <th scope="col">Erklärung</th>
+                        <th scope="col">Prüfungsrelevant</th>
+                    </tr>
+                </thead>
+                <tbody class="add-weiß">
+                    <tr>
+                        <td><input  class="form-control" required type="text" name="begriff" value="" placeholder="Ein Java Begriff"/></td>
+                        <td><textarea class="form-control" name="erklaerung" maxinput="250" placeholder="Eine Beschreibung"></textarea></td>
+                        <td><input class="form-control" type="checkbox" name="pruefungsrelevant" value="true" /></td>
+                    </tr>
+                </tbody>
+            </table>
+            <input class="btn btn-danger hinzufügen" type="submit" value="Hinzufügen" name="hinzufügen" />
+        </form>
 
 
-        <table border="1">
+        <table class="table table-hover table-dark datenbank">
             <thead>
                 <tr>
-                    <th>Java Begriff</th>
-                    <th>Erklärung</th>
-                    <th>Prüfungsrelevant</th>
+                    <th scope="col">Java Begriff</th>
+                    <th class="maxbreite" scope="col">Erklärung</th>
+                    <th scope="col">Prüfungsrelevant</th>
                 </tr>
             </thead>
             <tbody>
@@ -64,32 +89,11 @@
                     </tr>
 
                 </c:forEach>
-
             </tbody>
         </table>
 
         <br>
-        <h1>Neue Begriffe hinzufügen:</h1>
-        <form method="post" id="hinzufügen" name="Begriffe hinzufügen" action="">
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Java Begriff</th>
-                        <th>Erklärung</th>
-                        <th>Prüfungsrelevant</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="text" name="begriff" value="" placeholder="Ein Java Begriff"/></td>
-                        <td><input type="text" name="erklaerung" value="" placeholder="Eine Beschreibung"/></td>
-                        <td><input type="checkbox" name="pruefungsrelevant" value="true" /></td>
-                    </tr>
-                </tbody>
-            </table>
-            <input type="submit" value="Hinzufügen" name="hinzufügen" />
-        </form>
-
-
+        
+        </div>
     </body>
 </html>

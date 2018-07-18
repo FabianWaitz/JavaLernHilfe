@@ -6,6 +6,11 @@ h1 {
     color:red;
 }
 
+.errormeldung {
+    border: solid grey 1px;
+    padding: 10px;
+}
+
 .okay {
     color:green;
 }
@@ -34,42 +39,90 @@ div#include{
     margin-top: 20px;
 }
 
-div#navigation{
-    padding-bottom: 10px;
-}
-
-div#navigation ul{
-    padding-left: 0px;
-}
-
-div#navigation li {
-    display: inline-table;
-    width: 150px;
+.blog-nav {
+    margin: 0px;
+    padding: 15px;
     text-align: center;
-    margin-right: 15px;
-    margin-left:  0px;
-    padding: 10px 0 10px 0px;
-    background-color: #0099cc;
-    border-radius: 5px;
+    margin-top: 0px;
+    font-size: 2rem;
 }
 
-div#navigation a {
-    font-family: sans-serif;
-    font-size: small;
+.blog-nav-item {
+    display: inline-block;
+    padding: 05px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1.2em;
+    color: #222222;
+}
+
+.a {
+    background-color: transparent;
     text-decoration: none;
-    color: #ffffff;
 }
 
-div#navigation a:hover {
-    text-transform: uppercase;
+.a, .btn-link {
+    text-decoration: none;
+    color: #222222;
 }
+
+.btn-link:hover {
+    text-decoration: none;
+    color: red;
+}
+
+
 
 div#sessioninfo {
     font-size: small;
     color: #0066cc;
     background-color: #eeeeee;
-    margin-top: 40px;
+    margin-top: 5px;
     border-width: 1px;
     border-style: solid;
     display: table;
+    margin-bottom: 20px;
+    
 }
+
+
+.container {
+    width: 768px;
+    position: relative;
+    min-height: 100%;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.btn, .btn-primary, .hinzufügen {
+    margin-bottom: 15px;
+}
+
+
+.datenbank  {
+    margin-top: 55px;
+}
+
+
+.add {
+    margin-top: 0px;
+    
+}
+
+.maxbreite {
+    width: 200px;
+}
+
+
+.add-weiß {
+    
+}
+
+.register {
+    margin-top: 30px;
+}
+

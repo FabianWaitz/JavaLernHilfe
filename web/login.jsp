@@ -8,35 +8,35 @@
         <title>Loginformular</title>
     </head>
     <body>
-        <%@ include file="/WEB-INF/jspf/navi.jspf"%>  
-        
-        <%
-            if(request.getParameter("Retry") != null)
-                out.println("<h1 class=\"error\">Loginfehler - bitte nochmal</h1>");
-        %>
-        <form method="post" action="j_security_check">
-            <fieldset id="logindaten">
-                <legend>Login</legend>
-                <ol>
-                    <li>
-                        <label for="j_nutzername">Benutzername</label>
-                        <input type="text" name="j_username" autofocus>
-                    </li>
-                    <li>
-                        <label for="j_password">Passwort</label>
-                        <input type="password" name="j_password">
-                    </li>
-                    <li>
-                        <input type="submit" value="Einloggen">
-                        <input type="reset" value="Zurücksetzen">
-                    </li>
-                </ol>
-            </fieldset>
-        </form>
-        
-           <%@ include file="/WEB-INF/jspf/sessioninfo.jspf"%> 
+        <div class="container">
+            <%@ include file="/WEB-INF/jspf/navi.jspf"%>  
 
-      
+            <%
+                if (request.getParameter("Retry") != null) {
+                    out.println("<h1 class=\"error\">Loginfehler - bitte nochmal</h1>");
+                }
+            %>
 
+            <div class="formular">
+                <form method="post" action="j_security_check">
+                    <fieldset id="logindaten">
+                        <h2>Login</h2>
+                        <div class="form-group">
+
+                            <input type="text" class="form-control" name="j_username"  placeholder="Benutzername">
+                        </div>
+                        <div class="form-group">
+
+                            <input type="password" class="form-control" name="j_password"  placeholder="Passwort">
+                        </div>
+                        <input type="submit" class ="btn btn-danger" value="Einloggen" />
+                        <input type="reset" class="btn btn-danger" value="Zurücksetzen">
+                    </fieldset>
+                </form>
+            </div>
+            <%@ include file="/WEB-INF/jspf/sessioninfo.jspf"%> 
+
+
+        </div>
     </body>
 </html>
