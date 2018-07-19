@@ -12,14 +12,14 @@
         <div class="container">
         <%@ include file="/WEB-INF/jspf/navi.jspf"%>  
         
-        <h1>Bitte registrieren Sie Ihren Admin:</h1>
+        <h2 style="color:#dc3545;">Bitte registriere einen Admin:</h2>
        
         
-        <div class="formular">
+        <div class="formularadmin">
     <form action="adminreg.jsp" method="post">
         <div class="form-group">
             <input type="text" class="form-control" name="admin" aria-describedby="emailHelp" placeholder="Admin">
-            <small id="emailHelp" class="form-text text-muted">Bitte keine Umlaute verwenden</small>
+            <small id="emailHelp" class="form-text text-muted">Ihre Daten unterliegen unserem Datenschutz</small>
         </div>
         <div class="form-group">
             <input type="password" class="form-control" name="passwort" placeholder="Passwort">

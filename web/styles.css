@@ -1,44 +1,5 @@
-h1 {
-    font-size: large;
-}
 
-.error {
-    color:red;
-}
-
-.errormeldung {
-    border: solid grey 1px;
-    padding: 10px;
-}
-
-.okay {
-    color:green;
-}
-
-fieldset {
-    display: inline-block;
-}
-
-form ol{
-    margin: 0;
-    list-style: none;
-}
-
-form ol li{      
-    padding: 0;
-    clear: both;
-    margin: 0 0 5px 0;
-}
-
-label {
-    width: 150px;
-    float: left;
-}
-
-div#include{
-    margin-top: 20px;
-}
-
+/*Navigation: */
 .blog-nav {
     margin: 0px;
     padding: 15px;
@@ -48,45 +9,30 @@ div#include{
 }
 
 .blog-nav-item {
-    display: inline-block;
-    padding: 05px;
+    padding: 15px;
     padding-top: 0;
     padding-bottom: 0;
-    font-size: 1.2em;
+    font-size: 1.0em;
     color: #222222;
 }
 
 .a {
     background-color: transparent;
     text-decoration: none;
+    outline: none;
 }
 
 .btn-link:focus,
 .btn-link:active:focus,
 .btn-link:hover {
     text-decoration: none;
-    color: #e83748;
+    color: #919191;
+    outline: none;
 }
 
-
-
-
-
-div#sessioninfo {
-    font-size: small;
-    color: #0066cc;
-    background-color: #eeeeee;
-    margin-top: 5px;
-    border-width: 1px;
-    border-style: solid;
-    display: table;
-    margin-bottom: 20px;
-    
-}
-
-
+/*Container für alle body Elemente*/
 .container {
-    width: 768px;
+    width: 900px;
     position: relative;
     min-height: 100%;
     max-width: 100%;
@@ -94,38 +40,117 @@ div#sessioninfo {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-
 }
 
+/*Überschriften*/
+h1 {
+    font-size: large;
+}
+
+h2 {
+    color: #414141;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+} 
+
+/*Bootstrap - Button*/
 .btn, .btn-primary, .hinzufügen {
     margin-bottom: 15px;
 }
 
+/*Löschen der Daten*/
+.xclass{
+    text-decoration: none;
+    color: white;  
+}
+.xclass:focus,
+.xclass:active:focus,
+.xclass:hover { 
+    text-decoration: none;
+    color: white; 
+}
 
+.xclassadmin {
+    text-decoration: none;
+    color: black;
+        
+}
+.xclassadmin:focus,
+.xclassadmin:active:focus,
+.xclassadmin:hover { 
+    text-decoration: none;
+    color: black; 
+}
+
+
+
+/*Fehlermeldung*/
+.error {
+    color:red;
+}
+
+.errormeldung {
+    border: solid grey 1px;
+    padding: 10px;
+}
+
+
+/*Anzeige Adminbereich*/
+.okay {
+    color:green;
+}
+
+
+/*Sessioninformation*/
+div#sessioninfo {
+    font-size: small;
+    color: #222222;
+    background-color: #eeeeee;
+    margin-top: 5px;
+    border-width: 2px;
+    border-style: solid;
+    display: table;
+    margin-bottom: 20px;    
+}
+
+/*Tabellen und Datenbankausgaben*/
 .datenbank  {
-    margin-top: 55px;
+    margin-top: 35px;
+}
+
+.datenbankadmin {
+    margin-top: 20px;
 }
 
 
 .add {
-    margin-top: 0px;
-    
+    margin-top: 0px
 }
 
+
+/*Width-Definiton der Datenbank im Benutzerbereich*/
 .maxbreite {
-    width: 200px;
+    width: 550px;
 }
 
-
-.add-weiß {
-    
-}
-
+/*Registrierung*/
 .register {
     margin-top: 30px;
 }
 
+/*Einlogginformation*/
 .logininfo p{
     font-size: 15px;
 }
+
+/*Registrierungsformular*/
+.formular {
+    max-width: 300px;
+}
+/*
+Adminregistrierung*/
+.formularadmin {
+    max-width: 330px;
+}
+
+
 

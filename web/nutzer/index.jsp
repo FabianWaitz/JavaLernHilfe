@@ -40,8 +40,9 @@
 
 
         <h2>Willkommen im Java-Lernbereich.</h2>
-        <p><b>Sollte dieser Bereich für dich neu sein, kannst du dir gerne weitere Informationen zur Erklärung des Java-Lernbereich unter weitere Informationen einholen.</b><br>
-        </p><br>
+        <p><b>Es ist dir möglich, in diesem Bereich Lernbegriffe anzulegen und diese gegebenfalls mit einer Erklärung zu erweitern.
+              Außerdem kannst du (falls nötig) die Begriffe als "prüfungsrelevant" kennzeichnen.
+              Alle Begriffe können jederzeit gelöscht werden.</b></p><br>
         
 
         
@@ -84,7 +85,7 @@
                         <td>${aktuellerBegriff.Erklärung}</td>
                         <td> <c:if test="${aktuellerBegriff.Prüfungsrelevant}">Ja</c:if>
                             <c:if test="${!aktuellerBegriff.Prüfungsrelevant}">Nein</c:if> </td>
-                        <td><a href="index.jsp?delete=${aktuellerBegriff.Java_Begriffe}">X</a> </td>
+                        <td><a class="xclass" href="index.jsp?delete=${aktuellerBegriff.Java_Begriffe}">X</a> </td>
 
                     </tr>
 

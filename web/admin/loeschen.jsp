@@ -38,11 +38,12 @@
 
             <h2 class="okay">Sie können nun alle Benutzer verwalten!</h2>
             <h3><b>Wichtig:</b></h3><p>Lösche unter keinen Umständen den Nutzer "admin", da 
-                es ansonsten keine Möglichkeiten mehr gibt, den Adminbereich zu verwalten. Das Löschen der Nutzer
+                es ansonsten keine Möglichkeiten mehr gibt, den Adminbereich zu verwalten. Das Löschen der einzelnen Nutzer
                 entfernt ihre Daten endgültig!</p>
+            
 
-            <table class="table table-hover table-dark datenbank">
-                <thead>
+            <table class="table table-hover datenbankadmin" border="1">
+                <thead class="thead-dark">
                     <tr>
                         <th scope="col">Benutzername</th>
                         <th scope="col">Benutzergruppe</th>
@@ -57,16 +58,20 @@
                             <td>${benutzer.BENUTZERNAME}</td>
                             <td>${benutzer.GRUPPENNAME}</td>
 
-                            <td><a href="loeschen.jsp?delete=${benutzer.benutzername}">X</a> </td>
+                            <td><a  class="xclassadmin" href="loeschen.jsp?delete=${benutzer.benutzername}">X</a> </td>
 
                         </tr>
 
                     </c:forEach>
+                        
 
 
                 </tbody>
             </table>
+            <div class="nutzerinfo">
+            <p>b_nutzer = Benutzer</p><p>a_nutzer = Admin</p>
             <a class="btn btn-danger" href="index.jsp">Zurück</a>
+            </div>
             <footer>
                 <%@ include file="/WEB-INF/jspf/sessioninfo.jspf"%> 
             </footer>

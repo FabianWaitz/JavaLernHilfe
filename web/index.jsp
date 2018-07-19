@@ -17,18 +17,18 @@
         <h2>Herzlich Willkommen!</h2>
         <p>
             <b>Wir hoffen, dass Ihr viel Spaß mit unserem Programm haben werdet.
-                <br>Solltet ihr bereits registriert sein, könnt ihr euch einfach im Benutzerbereich anmelden.<br>
+                <br>Solltet Ihr bereits registriert sein, könnt Ihr euch einfach im Benutzerbereich anmelden.<br>
                 Alle neuen Nutzer müssen sich bitte erst noch registrieren.</b><br>
         </p>
 
-        <h2 style="color:#dc3545;" class="register">Bitte registrieren Sie sich</h2>
+        <h2 style="color:#dc3545;" class="register">Bitte registrieren Sie sich:</h2>
 
 
         <div class="formular">
             <form action="registrierung.jsp" method="post">
                 <div class="form-group">
                     <input type="text" class="form-control" name="benutzername" aria-describedby="emailHelp" placeholder="Benutzername">
-                    <small id="emailHelp" class="form-text text-muted">Bitte keine Umlaute verwenden</small>
+                    <small id="emailHelp" class="form-text text-muted">Ihre Daten unterliegen unserem Datenschutz</small>
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-control" name="passwort" placeholder="Passwort">
