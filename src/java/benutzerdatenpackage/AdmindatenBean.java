@@ -1,3 +1,7 @@
+////Ausführliche Erklärung unter BenutzerdatenBean.java 
+////=> Diese Funktion unterscheidet sich lediglich darin, dass kein Benutzer registriert wird sondern ein Admin.
+////Der Ablauf ist identisch zu BenutzerdatenBean, am Ende wird jedoch der registrierte Admin der Nutzergruppe a_nutzer 
+//(admin) zugewiesen.
 
 package benutzerdatenpackage;
 

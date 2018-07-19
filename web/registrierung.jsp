@@ -3,6 +3,15 @@
 <%@page pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
 
+<!--Erweiterung der Erklärung aus Source Packages/benutzerdatenpackage/BenutzerdatenBean.java: 
+
+Nach dem die Daten nun erfasst, verschlüsselt und übermittelt wurde, sind beide sql-update Methoden
+dafür zuständig, den Nutzer erfolgreich anzulegen. Es wird für jeden registrierten Nutzer ein Benutzername,
+Passwort und eine zugeordnete Nutzergruppe (in diesem Fall b_nutzer) angelegt.
+
+Nun haben Sie bereits zwei der insgesammt drei angelegten Datenbanktabellen kennengelernt.
+DBADMIN.BENUTZER: Beinhaltet den Benutzernamen und das Passwort
+DBADMIN.BENUTZERGRUPPE: Ordnet jedem Benutzernamen eine Nutzergruppe zu. Entweder b_nutzer (Nutzer) oder a_nutzer (admin)-->
 
 <jsp:useBean id="userData" scope="page" class="benutzerdatenpackage.BenutzerdatenBean" />
 <jsp:setProperty name="userData" property="*" />
@@ -24,6 +33,10 @@
         <title>Registrierungsbestätigung</title>
         <link href="styles.css" rel="stylesheet" type="text/css" />
     </head>
+    
+<!--    Nach dem im Hintergrund nun nach erfolgreicher Eingabe der Daten, diese erfasst, verschlüsselt und im besten Fall
+        auch in die Datenbank eingetragen wurden, erhält der Nutzer nun auch eine Bestätigung über seine
+        erfolgreiche Registrierung. Der zuvor eingegebene Benutzername wird hier in einem kurzen Bestätigungstext ausgegeben-->
 
     <body> 
         <div class="container">

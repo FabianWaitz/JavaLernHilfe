@@ -1,4 +1,5 @@
 
+/*Das überschaubare aber nötige CSS für die Programmanwendung*/
 /*Navigation: */
 .blog-nav {
     margin: 0px;
@@ -66,7 +67,7 @@ h2 {
 .xclass:active:focus,
 .xclass:hover { 
     text-decoration: none;
-    color: white; 
+    color: #C9C4C4; 
 }
 
 .xclassadmin {

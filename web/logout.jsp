@@ -1,3 +1,5 @@
+
+<!--Eine Funktion für den Logout-->
 <% 
     session.invalidate();
    

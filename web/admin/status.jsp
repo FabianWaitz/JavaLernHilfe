@@ -13,6 +13,9 @@
         <title>JSP Page</title>
     </head>
     <body>
+        
+<!--        Diese Seite dient als kleines Gadget und bietet eine Statusübersicht über die aktuelle Session an-->
+        
         <%@ include file="/WEB-INF/jspf/navi.jspf"%> 
         <div class="container">
 

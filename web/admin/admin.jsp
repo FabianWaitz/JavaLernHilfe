@@ -9,6 +9,13 @@
         <title>Benutzerregistrierung</title>
     </head>
     <body>
+        
+<!--    Die Registrierung eines Admins funktioniert identisch wie die eines Nutzers. 
+        Unterschied: Anstatt "benutzername" wird nun "admin" an die Bean übermittelt.
+        Ebenso werden die Daten des registrierten Admins in die Datenbanktabelle Benutzer hinzugefügt, 
+        die Benutzergruppe ändert sich jedoch auf a_nutzer (Adminrechte). Somit wird gewährleistet, dass der 
+        Admin auch Adminrechte besitzt, da a_nutzer im Gegensatz zu b_nutzer keine Einschränkungen beinhaltet. -->
+        
         <div class="container">
         <%@ include file="/WEB-INF/jspf/navi.jspf"%>  
         
@@ -18,8 +25,8 @@
         <div class="formularadmin">
     <form action="adminreg.jsp" method="post">
         <div class="form-group">
-            <input type="text" class="form-control" name="admin" aria-describedby="emailHelp" placeholder="Admin">
-            <small id="emailHelp" class="form-text text-muted">Ihre Daten unterliegen unserem Datenschutz</small>
+            <input type="text" class="form-control" name="admin" aria-describedby="info" placeholder="Admin">
+            <small id="info" class="form-text text-muted">Ihre Daten unterliegen unserem Datenschutz</small>
         </div>
         <div class="form-group">
             <input type="password" class="form-control" name="passwort" placeholder="Passwort">

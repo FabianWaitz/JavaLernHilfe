@@ -14,6 +14,10 @@
     </head>
     <body>
         <div class="container">
+            
+<!--        Die If-Funktion überprüft im Zusammenhang mit der Delete Funktion ob ein Benutzer gelöscht werden
+            kann. Ist dies möglich, wird der Benutzer sowohl aus der Datenbanktabelle BENUTZER als auch aus BENUTZERGRUPPE
+            und somit endgültig gelöscht-->
 
             <c:if test="${not empty param.delete}">
 
@@ -27,8 +31,9 @@
                 </sql:update> 
 
             </c:if> 
-
-
+            
+<!--        Folgendes Query gibt die Daten der Datenbanktabelle Benutzergruppe aus.-->
+            
             <sql:query var="result" dataSource="jdbc/nutzer">
                 SELECT * from DBADMIN.BENUTZERGRUPPE
             </sql:query>
@@ -41,6 +46,10 @@
                 es ansonsten keine Möglichkeiten mehr gibt, den Adminbereich zu verwalten. Das Löschen der einzelnen Nutzer
                 entfernt ihre Daten endgültig!</p>
             
+<!--        Diese Tabelle liefert einen Überblick über bereits angelegte Nutzer oder Admins. 
+            Das Prinzip ist bereits unter nutzer/index.jsp bekannt. 
+            Ebenso durchläuft eine forEach Funktion die einzelnen Zeilen und gibt den Benutzernamen und
+            die Nutzergruppe (Gruppenname) der Datenbanktabelle aus. -->
 
             <table class="table table-hover datenbankadmin" border="1">
                 <thead class="thead-dark">

@@ -5,6 +5,7 @@
 
 <!DOCTYPE html>
 <html>
+<!--    Diese Seite stellt die "Kernseite des Programmes dar.-->
 
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" >
@@ -13,17 +14,26 @@
 
         <title>Datenbankseite</title>
     </head>
+   
     <body>
         <div class="container">
+                
+            
         <c:if test="${not empty param.begriff or not empty param.erklaerung or not empty param.pruefungsrelevant}">
 
-
+<!--    Die im Formular / Tabelle eingegebenen Daten werden mit diesem Query in der Datenbanktabelle geupdated.
+        Sollte "prüfungsrelevant" nicht ausgewählt sein, wird ein "false" in die Datenbanktabelle übermittelt.-->
+        
             <sql:update var="result" dataSource="jdbc/nutzer">
                 INSERT INTO DBADMIN.JAVA_BEGRIFFE (JAVA_BEGRIFFE, ERKLÄRUNG, PRÜFUNGSRELEVANT)
                 VALUES ('${param.begriff}', '${param.erklaerung}', ${param.pruefungsrelevant} <c:if test="${!param.pruefungsrelevant}">false</c:if>)
             </sql:update>
 
         </c:if>
+                
+<!--    Sofern ein Eintrag gelöscht werden soll, wird mit dem Klicken des "X" die obere if-Anweisung ausgeführt.
+        Ist diese if-Anweisung zutreffend wird der Eintrag aus der Datenbanktabelle Java_Begriffe gelöscht. -->
+        
         <c:if test="${not empty param.delete}">
 
             <sql:update var="result" dataSource="jdbc/nutzer">
@@ -32,6 +42,9 @@
             </sql:update> 
 
         </c:if> 
+       
+<!--   Dieses Query lädt die Datenbanktabelleninhalte aus Java_Begriffe rein,
+       dies ist die dritte und "letzte" Datenbanktabelle -->
         <sql:query var="result" dataSource="jdbc/nutzer">
             SELECT Java_Begriffe, Erklärung, Prüfungsrelevant from DBADMIN.JAVA_BEGRIFFE FETCH FIRST 100 ROWS ONLY
         </sql:query>
@@ -45,6 +58,9 @@
               Alle Begriffe können jederzeit gelöscht werden.</b></p><br>
         
 
+<!--   In dieser Tabelle ist es möglich neue Begriffe in die Datenbanktabelle "Java_Begriffe" hinzuzufügen.
+       Es ist Voraussetzung einen Begriff einzugeben, während "Erklärung" und "prüfungsrelevant" als zusätzliche
+       Option dienen.-->
         
         <h2 style="color:#dc3545;">Neue Begriffe hinzufügen:</h2>
         <form method="post" id="hinzufügen" name="Begriffe hinzufügen" action="">
@@ -68,6 +84,12 @@
         </form>
 
 
+<!--    In dieser Tabelle werden die Inhalte der Datenbanktabelle "Java_Begriffe" ausgegeben.
+        In Kombination mit dem DB Query werden alle bisher angelegten Datenbankinhalte ausgegeben.
+        Sollte ein neuer Eintrag hinzugefügt werden, wird dieser an die bisher angelegten Datenbankinhalte angehängt.
+        Die Ausgabe funktioniert über eine forEach Methode, welche die einzelnen Zeilen durchläuft.
+        Die Funktion "delete" wird im oberen Teil der Seite erläutert.-->
+        
         <table class="table table-hover table-dark datenbank">
             <thead>
                 <tr>

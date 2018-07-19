@@ -1,5 +1,5 @@
 
-<!-- Gemeinsam verwendete Session-Information -->
+<!-- Gemeinsam verwendete Session-Information für den Nutzer zur Orientierung-->
 <div class="logininfo">
    
     <p><b>Sessioninformation:</b> Eingeloggt als <%=  request.getRemoteUser()%></p>     

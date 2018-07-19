@@ -1,3 +1,5 @@
+//Diese Bean ist für den HashEncode - SHA256 zuständig.
+//Registriert sich ein Nutzer erfolgreich, wird sein Passwort in einen Hashcode umgewandelt und somit verschlüsselt
 
 package benutzerdatenpackage;
 

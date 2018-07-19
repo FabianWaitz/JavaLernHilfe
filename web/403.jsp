@@ -1,5 +1,9 @@
 <%@page isErrorPage="true" contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
+<!--Diese Seite gibt eine Fehlermeldung aus, sobald sich ein "normaler "Nutzer versucht auf die Adminseite
+zu begeben.-->
+
 <html> 
     <head> 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

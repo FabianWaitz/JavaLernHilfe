@@ -8,6 +8,13 @@
         <title>Adminseite</title>
     </head>
     <body>
+        
+<!--    Dieser Bereich stellt den Adminbereich des Programmes dar.
+        Hier sind folgende Funktionen möglich: 
+        - Eine Statusinformation über die aktuelle Session einholen.
+        - Einen neuen Admin registrieren. 
+        - Einen bereits angelegten Benutzer oder Admin löschen.-->
+        
         <div class="container">
         <%@ include file="/WEB-INF/jspf/navi.jspf"%>  
         

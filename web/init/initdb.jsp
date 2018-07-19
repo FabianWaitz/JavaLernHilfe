@@ -3,6 +3,7 @@
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+<!--Ausführung in der Browserleiste Projektname/init/initdb.jsp-->
 
 <sql:update dataSource="jdbc/nutzer">
     CREATE TABLE JAVA_BEGRIFFE

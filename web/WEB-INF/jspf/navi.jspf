@@ -1,3 +1,6 @@
+
+<!--Diese Navigation wird in alle angelegten Seiten eingegliedert. 
+Die einzelnen Verlinkungen sind mit Bootstrap gestaltet. -->
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" >
     <meta http-equiv="Content-Type" content="text/html" charset=UTF-8">
