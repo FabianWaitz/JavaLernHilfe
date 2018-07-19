@@ -9,6 +9,7 @@ Nach dem die Daten nun erfasst, verschlüsselt und übermittelt wurde, sind beid
 dafür zuständig, den Admin erfolgreich anzulegen. Es wird für jeden registrierten Admin ein Benutzername,
 Passwort und eine zugeordnete Nutzergruppe (in diesem Fall a_nutzer) angelegt.
 a_nutzer verspricht uneingeschränkten Zugang des Programmes.
+
 -->
 
 <jsp:useBean id="userData" scope="page" class="benutzerdatenpackage.AdmindatenBean" />
