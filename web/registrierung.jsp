@@ -32,6 +32,7 @@ DBADMIN.BENUTZERGRUPPE: Ordnet jedem Benutzernamen eine Nutzergruppe zu. Entwede
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Registrierungsbestätigung</title>
         <link href="styles.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" >
     </head>
     
 <!--    Nach dem im Hintergrund nun nach erfolgreicher Eingabe der Daten, diese erfasst, verschlüsselt und im besten Fall

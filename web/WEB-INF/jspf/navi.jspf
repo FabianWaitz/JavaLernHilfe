@@ -6,12 +6,13 @@ Die einzelnen Verlinkungen sind mit Bootstrap gestaltet. -->
     <meta http-equiv="Content-Type" content="text/html" charset=UTF-8">
     <link href="<%= request.getContextPath()%>/styles.css" rel="stylesheet" type="text/css"/>
 
-    <title>Datenbankseite</title>
+    <title>Navigationsleiste</title>
 </head>
 <!-- Gemeinsam verwendete Navigation -->
 <div class="blog-nav">
     <ul>
         <% String pfad = request.getContextPath();%>
+        
         <a class ="btn btn-link blog-nav-item" href="<%= pfad%>/index.jsp">Startseite</a>
         <a class ="btn btn-link blog-nav-item" href="<%= pfad%>/nutzer/index.jsp">Benutzer</a>
         <a class ="btn btn-link blog-nav-item" href="<%= pfad%>/admin/index.jsp">Admin</a>

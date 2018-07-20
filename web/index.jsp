@@ -22,8 +22,10 @@
     er angemeldet ist. Eventuell vergisst er bei so viel Java-Lernen ja mal seinen Nutzernamen -->
 
     <body>
+        
+        <%@ include file="/WEB-INF/jspf/navi.jspf"%> 
+        
         <div class="container">
-        <%@ include file="/WEB-INF/jspf/navi.jspf"%>  
         
         <h2>Herzlich Willkommen!</h2>
         <p>
@@ -32,14 +34,14 @@
                 Alle neuen Nutzer müssen sich bitte erst noch registrieren.</b><br>
         </p>
 
-        <h2 style="color:#dc3545;" class="register">Bitte registrieren Sie sich:</h2>
+        <h2 style="color:#dc3545;" class="register">Bitte registriere dich:</h2>
 
 
         <div class="formular">
             <form action="registrierung.jsp" method="post">
                 <div class="form-group">
                     <input type="text" class="form-control" name="benutzername" aria-describedby="info" placeholder="Benutzername">
-                    <small id="info" class="form-text text-muted">Ihre Daten unterliegen unserem Datenschutz</small>
+                    <small id="info" class="form-text text-muted">Die Daten unterliegen unserem Datenschutz</small>
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-control" name="passwort" placeholder="Passwort">

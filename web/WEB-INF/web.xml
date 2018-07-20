@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
+<!--Für die Session ist ein Sessiontimeout von 30min festgelegt.
+    Außerdem sind die security_constraints dafür zuständig, dass die Zurordnung von Nutzer und Admin in die
+    jeweilgen Nutzerbereiche erfolgreich zugeordnet wird. Z.B. Ist der Benutzerbereich nur für den Ordner nutzer 
+    und alle darunter liegenden Bereiche zugängig. 
+    Die Zugangskontrolle wird mit einem Realm in der Glassfish
+    Admin Console zudem überprüft.
+    
+    Des Weiteren sind die Errorpage und der Login auch definiert. 
+    -->
+    
     <session-config>
         <session-timeout>
             30

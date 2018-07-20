@@ -5,22 +5,30 @@
     margin: 0px;
     padding: 15px;
     text-align: center;
-    margin-top: 0px;
-    font-size: 2rem;    
+    margin-top: 10px;
+    font-size: 2rem;  
+    border: 0;
+      
+}
+
+.a, .btn {
+    transition: none;
+    border: 0;
 }
 
 .blog-nav-item {
-    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-top: 0;
     padding-bottom: 0;
-    font-size: 1.0em;
+    font-size: 0.8em;
     color: #222222;
 }
-
+    
 .a {
     background-color: transparent;
     text-decoration: none;
-    outline: none;
+
 }
 
 .btn-link:focus,
@@ -29,10 +37,28 @@
     text-decoration: none;
     color: #919191;
     outline: none;
+
 }
+
 
 /*Container für alle body Elemente*/
 .container {
+    width: 900px;
+    position: relative;
+    min-height: 100%;
+    max-width: 100%;
+    padding-right: 25px;
+    padding-left: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    margin-top: -25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.container2 {
     width: 900px;
     position: relative;
     min-height: 100%;
@@ -61,25 +87,25 @@ h2 {
 /*Löschen der Daten*/
 .xclass{
     text-decoration: none;
-    color: white;  
+    color: black; 
 }
 .xclass:focus,
 .xclass:active:focus,
 .xclass:hover { 
     text-decoration: none;
-    color: #C9C4C4; 
+    color: grey; 
 }
 
 .xclassadmin {
     text-decoration: none;
     color: black;
-        
+
 }
 .xclassadmin:focus,
 .xclassadmin:active:focus,
 .xclassadmin:hover { 
     text-decoration: none;
-    color: black; 
+    color: grey; 
 }
 
 
@@ -124,7 +150,7 @@ div#sessioninfo {
 
 
 .add {
-    margin-top: 0px
+    margin-top: 0px;
 }
 
 
@@ -150,6 +176,7 @@ div#sessioninfo {
 /*
 Adminregistrierung*/
 .formularadmin {
+    
     max-width: 330px;
 }
 

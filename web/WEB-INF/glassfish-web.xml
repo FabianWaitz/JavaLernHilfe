@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE glassfish-web-app PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 Servlet 3.0//EN" "http://glassfish.org/dtds/glassfish-web-app_3_0-1.dtd">
 <glassfish-web-app error-url="">
+    
+<!--    In der Glassfish-web.xml werden den Nutzern die einzelnen Gruppennamen zugewiesen.-->
+    
     <resource-ref>
     <res-ref-name>jdbc/nutzer</res-ref-name>
     <jndi-name>jdbc/nutzer</jndi-name>

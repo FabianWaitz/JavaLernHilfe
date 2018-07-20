@@ -7,14 +7,15 @@
         <link href="<%= request.getContextPath()%>/styles.css" rel="stylesheet" type="text/css"/>
         <title>Loginformular</title>
     </head>
-    
-<!--    Diese Seite ist für den Login zuständig - und zwar sowohl für den Nutzer als auch den Admin Login gleichermaßen.-->
-    
+
+    <!--    Diese Seite ist für den Login zuständig - und zwar sowohl für den Nutzer als auch den Admin Login gleichermaßen.-->
+
     <body>
+
+        <%@ include file="/WEB-INF/jspf/navi.jspf"%>  
         <div class="container">
-            <%@ include file="/WEB-INF/jspf/navi.jspf"%>  
-            
-<!--            Sollten die eingegeben Daten fehlerhaft sein, erfolgt eine Ausgabe "Loginfehler - bitte nochmal"-->
+
+            <!--            Sollten die eingegeben Daten fehlerhaft sein, erfolgt eine Ausgabe "Loginfehler - bitte nochmal"-->
 
             <%
                 if (request.getParameter("Retry") != null) {
@@ -22,13 +23,13 @@
                 }
             %>
 
-<!--            In diesem Formular wird der Login geregelt. Voraussetzung für einen erfolgreichen Login ist natürlich
-            ein Eintrag in der Datenbank DBADMIN.BENUTZER. Der eingegebene Benutzername und das Passwort muss mit
-            einem dieser Einträge übereinstimmen.
-            Erklärung: Der Nutzer stellt eine Anfrage an den Server und erbittet Zugang zum Bereich "Benutzer". 
-            Der Server gewährt in diesem, sofern er sich erfolgreich eingeloggt hat, ansonten wird er an eine ERROR Page verwiesen.
-             -->        
-            
+            <!--            In diesem Formular wird der Login geregelt. Voraussetzung für einen erfolgreichen Login ist natürlich
+                        ein Eintrag in der Datenbank DBADMIN.BENUTZER. Der eingegebene Benutzername und das Passwort muss mit
+                        einem dieser Einträge übereinstimmen.
+                        Erklärung: Der Nutzer stellt eine Anfrage an den Server und erbittet Zugang zum Bereich "Benutzer". 
+                        Der Server gewährt in diesem, sofern er sich erfolgreich eingeloggt hat, ansonten wird er an eine ERROR Page verwiesen.
+            -->        
+
             <div class="formular">
                 <form method="post" action="j_security_check">
                     <fieldset id="logindaten">
